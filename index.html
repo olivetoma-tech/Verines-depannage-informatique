@@ -1,1 +1,407 @@
 
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VD INFORMATIQUE | Dépannage informatique en Charente-Maritime</title>
+
+<meta name="description" content="VD Informatique : dépannage, réparation, assistance, maintenance, réseau et optimisation informatique de proximité en Charente-Maritime. Diagnostic préliminaire gratuit.">
+
+<!-- Vérification Google : conservée -->
+<meta name="google-site-verification" content="xLzsHmYxKfIVvrGYvTaVgJJeAAEtgEM39DXQCR3K5Lg" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #071629;
+  --navy-light: #102945;
+  --blue: #087fc5;
+  --cyan: #29baff;
+  --orange: #ff9900;
+  --white: #f5f8fc;
+  --muted: #c3d0df;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.7;
+}
+
+.hero {
+  min-height: 590px;
+  padding: 65px 20px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(0,130,220,.30), transparent 40%),
+    radial-gradient(ellipse at 85% 75%, rgba(0,100,190,.25), transparent 40%),
+    linear-gradient(135deg, #061323, #0b2543 55%, #061323);
+  border-bottom: 2px solid var(--blue);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  transform: rotate(-15deg);
+  opacity: .7;
+}
+
+.hero::before {
+  top: 100px;
+  left: -150px;
+}
+
+.hero::after {
+  bottom: 90px;
+  right: -150px;
+}
+
+.hero-content {
+  max-width: 950px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.logo-vd {
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -5px;
+  color: white;
+  text-shadow: 0 0 25px rgba(41,186,255,.35);
+}
+
+.logo-name {
+  font-size: clamp(1.5rem, 5vw, 2.7rem);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.logo-name span {
+  color: var(--orange);
+}
+
+.logo-line {
+  width: 230px;
+  height: 4px;
+  margin: 15px auto;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+}
+
+.hero-services {
+  color: var(--orange);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  line-height: 1.3;
+  margin: 20px 0 5px;
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 17px 32px;
+  background: linear-gradient(135deg, #ffad22, #ed7900);
+  color: #101820;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 0 0 25px rgba(255,153,0,.35);
+  border: 2px solid #ffc45c;
+  transition: .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(255,153,0,.55);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #102b49, #0a1d33);
+  padding: 30px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(41,186,255,.35);
+  box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: var(--cyan);
+  font-size: 1.45rem;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.grid .card {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+li::marker {
+  color: var(--orange);
+}
+
+.highlight {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(41,186,255,.4);
+  background: #050f1c;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+footer a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+footer h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-services {
+  color: var(--orange);
+  margin-top: 15px;
+  font-size: .9rem;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 540px;
+    padding: 45px 18px;
+  }
+
+  .hero-services {
+    font-size: .85rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 15px 22px;
+  }
+
+  .card {
+    padding: 23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="logo">
+      <div class="logo-vd">VD</div>
+      <div class="logo-name">INFOR<span>MATIQUE</span></div>
+      <div class="logo-line"></div>
+    </div>
+
+    <div class="hero-services">
+      Dépannage · Assistance · Maintenance · Réseau · Optimisation · Réparation
+    </div>
+
+    <h1>
+      Assistance informatique de proximité<br>
+      <span>en Charente-Maritime</span>
+    </h1>
+
+    <p class="hero-description">
+      Des solutions adaptées à vos besoins, des conseils clairs et un accompagnement personnalisé.
+    </p>
+
+    <a class="btn" href="tel:+33787155088">
+      Diagnostic gratuit — Cliquez ici
+    </a>
+
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Une informatique accessible</h2>
+
+    <p>
+      Chez VD Informatique, nous privilégions l'écoute,
+      les explications claires et les solutions adaptées à votre situation.
+    </p>
+
+    <p>
+      <span class="highlight">Conseils et diagnostic préliminaire gratuits.</span>
+      Avant toute intervention, nous prenons le temps d'échanger
+      afin de comprendre le problème et d'orienter vers la meilleure solution.
+    </p>
+  </section>
+
+  <div class="grid">
+
+    <section class="card">
+      <h2>Dépannage & réparation</h2>
+      <ul>
+        <li>Ordinateurs lents ou instables</li>
+        <li>Virus et logiciels indésirables</li>
+        <li>Réinstallation Windows</li>
+        <li>Sauvegarde et transfert de données</li>
+        <li>Mises à jour système</li>
+        <li>Remplacement de composants</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Optimisation & gaming</h2>
+      <ul>
+        <li>Optimisation PC et PC Gaming</li>
+        <li>Montage et évolution de configuration</li>
+        <li>Gestion des températures</li>
+        <li>Nettoyage et entretien matériel</li>
+        <li>Mises à jour des pilotes</li>
+        <li>Diagnostic des performances</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Assistance & réseaux</h2>
+      <ul>
+        <li>Installation et configuration Wi-Fi</li>
+        <li>Configuration réseau</li>
+        <li>Diagnostic de connexion Internet</li>
+        <li>Installation d'imprimantes et périphériques</li>
+        <li>Sécurisation informatique domestique</li>
+        <li>Conseils et accompagnement</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <section class="card" style="margin-top:24px;">
+    <h2>Notre philosophie</h2>
+
+    <p>
+      Quand cela est possible, nous privilégions la réparation
+      et l'optimisation plutôt que le remplacement systématique du matériel.
+    </p>
+
+    <p>
+      Notre objectif est de rendre votre équipement fiable,
+      fonctionnel et adapté à vos besoins tout en maîtrisant les coûts.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Accompagnement et pédagogie</h2>
+
+    <p>
+      Tout le monde n'est pas à l'aise avec l'informatique.
+      Nous prenons le temps d'expliquer le fonctionnement des logiciels,
+      des ordinateurs et des équipements numériques.
+    </p>
+
+    <p>
+      Des interventions à domicile sont possibles pour l'installation,
+      la prise en main ou la formation sur certains outils.
+    </p>
+
+    <p>
+      Le déplacement est facturé selon la localisation.
+      Les conseils téléphoniques et l'analyse préliminaire restent gratuits.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+
+  <h3>VD INFORMATIQUE</h3>
+
+  <p>
+    <a href="mailto:verinesdepannage@gmail.com">
+      verinesdepannage@gmail.com
+    </a>
+  </p>
+
+  <p>Vérines et alentours · Charente-Maritime</p>
+
+  <p class="footer-services">
+    Dépannage · Assistance · Maintenance · Réseau · Optimisation · Réparation
+  </p>
+
+</footer>
+
+</body>
+</html>
